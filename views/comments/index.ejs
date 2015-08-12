@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body class="container">
+    <br>
+      <% include ../partials/header %>
+    </div>
+    <div class="row text-center">
+      <% comments.forEach(function(comment){ %>
+      <br><br><br>
+      <section class="feed">
+        <div class="comment">
+          <span class="content"><a href="#"><%=comment.content%></a></span><br>
+          <span class="date-text"><%=comment.created_at%></span><br>
+          <span class="date-text"><%=comment.updated_at%></span><br>
+          <div class="comment-author">
+            <%= comment.user %>
+          </div>
+        </div>
+      </section>
+      <% }); %>
+    </div>
+  </body>
+</html>
